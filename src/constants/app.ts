@@ -12,7 +12,7 @@ export type DeviceSeed = {
 
 export type LoginProvider = 'facebook' | 'google';
 
-export const DEFAULT_SITE_URL = 'https://expo.dev';
+export const DEFAULT_SITE_URL = 'https://google.com';
 
 export const STORAGE_KEYS = {
   signedIn: 'easacc:signed-in',

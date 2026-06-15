@@ -10,6 +10,7 @@ type FieldProps = {
   keyboardType?: 'default' | 'url';
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
   autoCorrect?: boolean;
+  secureTextEntry?: boolean;
 };
 
 export function Field({
@@ -22,6 +23,7 @@ export function Field({
   keyboardType = 'default',
   autoCapitalize = 'sentences',
   autoCorrect = true,
+  secureTextEntry = false,
 }: FieldProps) {
   return (
     <View style={styles.container}>
@@ -34,6 +36,7 @@ export function Field({
         placeholderTextColor="#6B7686"
         value={value}
         onChangeText={onChangeText}
+        secureTextEntry={secureTextEntry}
         style={[styles.input, errorText ? styles.inputError : null]}
       />
       {errorText ? <Text style={styles.error}>{errorText}</Text> : null}
